@@ -21,7 +21,12 @@ export default component$(() => {
     <>
       <h1 class="mb-8">Sandbox</h1>
 
-      <Modal.Root bind:show={show}>
+      <Modal.Root
+        bind:show={show}
+        onShow$={() => {
+          /* Removing this qrl will remove the issue */
+        }}
+      >
         <Modal.Trigger class={[buttonVariants({ look: "outline" })]}>
           Open Modal
         </Modal.Trigger>
